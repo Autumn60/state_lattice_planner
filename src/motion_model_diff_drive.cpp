@@ -276,6 +276,7 @@ void MotionModelDiffDrive::make_velocity_profile(const double dt, const Velocity
 
     ***************************************/
     int size = v_param.time / dt + 1;
+    if(size < 0) size = 0;
     // std::cout << "size: " << size << std::endl;
     v_profile.resize(size);
     s_profile.resize(size);
